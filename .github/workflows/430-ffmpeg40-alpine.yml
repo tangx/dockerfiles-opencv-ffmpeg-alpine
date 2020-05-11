@@ -18,6 +18,10 @@ jobs:
         login-server: hub.docker.com
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}  
+
+    - name: show env
+      run: env && pwd
+
     - name: docker-compose build
       run: docker-compose build
     - name: push 
