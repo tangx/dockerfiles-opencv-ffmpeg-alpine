@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  onbuild-430:
+    image: tangx/opencv-alpine:4.3.0-ffmpeg4.0-onbuild
+    build: 
+      context: .
+      dockerfile: onbuild.Dockerfile
+  runtime-430:
+    image: tangx/opencv-alpine:4.3.0-ffmpeg4.0-runtime
+    build:
+      context: .
+      dockerfile: runtime.Dockerfile
