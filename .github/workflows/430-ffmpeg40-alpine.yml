@@ -1,4 +1,10 @@
-name: Sourcegraph
+name: Opencv430 ffmpeg40 alpine
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 
 jobs:
