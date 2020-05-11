@@ -12,25 +12,23 @@ jobs:
     name: '430-ffmpeg40-alpine'
     runs-on: ubuntu-latest
     steps:
-    # - name: Login to DockerHub
-    #   uses: azure/docker-login@v1
-    #   with:
-    #     login-server: hub.docker.com
-    #     username: ${{ secrets.USERNAME }}
-    #     password: ${{ secrets.PASSWORD }}  
-
+    - name: Login to DockerHub
+      uses: azure/docker-login@v1
+      with:
+        login-server: hub.docker.com
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}  
+  
     - name: show env
       run: env && pwd
-
     - name: ls -al 
       run: ls -al 
-    - name: get docker-compose
-      run: sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose && chmod +x docker-compose
 
-    - name: build
-      run: ./docker-compose build
-    - name: push 
-      run: ./docker-compose push
+    - name: build and push 
+      uses:  actions/checkout@v2
+      run: |
+        docker-compose build
+        docker-compose push
 
 # steps:
 #   - name: Hello world action
