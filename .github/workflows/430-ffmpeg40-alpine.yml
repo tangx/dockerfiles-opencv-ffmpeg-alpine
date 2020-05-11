@@ -24,8 +24,9 @@ jobs:
     - name: ls -al 
       run: ls -al 
 
-    - name: build and push 
+    - name: use checkout
       uses:  actions/checkout@v2
+    - name: build and push
       run: |
         docker-compose build
         docker-compose push
