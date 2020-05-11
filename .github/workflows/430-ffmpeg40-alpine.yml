@@ -22,7 +22,12 @@ jobs:
     - name: show env
       run: env && pwd
 
-    - name: docker-compose build
+    - name: ls -al 
+      run: ls -al 
+    - name: get docker-compose
+      run: sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
+    - name: build
       run: docker-compose build
     - name: push 
       run: docker-compose push
