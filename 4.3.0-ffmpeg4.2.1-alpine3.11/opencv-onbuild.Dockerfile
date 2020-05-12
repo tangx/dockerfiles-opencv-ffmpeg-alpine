@@ -19,7 +19,6 @@ ENV BUILD="ca-certificates \
          libwebp-dev \
          tiff \
          libavc1394 \
-         jasper-libs \
          openblas \
          libgphoto2 \
          gstreamer \
@@ -28,7 +27,7 @@ ENV BUILD="ca-certificates \
 ENV DEV="clang clang-dev cmake pkgconf \
          openblas-dev gstreamer-dev gst-plugins-base-dev \
          libgphoto2-dev libjpeg-turbo-dev libpng-dev \
-         tiff-dev jasper-dev libavc1394-dev"
+         tiff-dev libavc1394-dev"
 
 
 RUN apk update && \
