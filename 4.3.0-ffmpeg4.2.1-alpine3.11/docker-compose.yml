@@ -1,13 +1,13 @@
 version: '3.1'
 
 services:
-  ffmpeg:
-    image: tangx/ffmpeg-alpine3.11:4.2.1-golang1.4.2
-    build: 
-      context: .
-      dockerfile: ffmpeg.Dockerfile
-  # opencv-onbuild:
-  #   image: tangx/opencv-alpine:4.3.0-ffmpeg4.2.1-onbuild
-  #   build:
+  # ffmpeg:
+  #   image: tangx/ffmpeg-alpine3.11:4.2.1-golang1.4.2
+  #   build: 
   #     context: .
-  #     dockerfile: opencv-onbuild.Dockerfile
+  #     dockerfile: ffmpeg.Dockerfile
+  opencv-onbuild:
+    image: tangx/opencv-alpine:4.3.0-ffmpeg4.2.1-onbuild
+    build:
+      context: .
+      dockerfile: opencv-onbuild.Dockerfile
