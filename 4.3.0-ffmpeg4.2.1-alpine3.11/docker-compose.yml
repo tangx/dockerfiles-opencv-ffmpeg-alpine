@@ -6,8 +6,8 @@ services:
     build: 
       context: .
       dockerfile: ffmpeg.Dockerfile
-  opencv-onbuild:
-    image: tangx/opencv-alpine:4.3.0-ffmpeg4.2.1-onbuild
-    build:
-      context: .
-      dockerfile: opencv-onbuild.Dockerfile
+  # opencv-onbuild:
+  #   # image: tangx/opencv-alpine:4.3.0-ffmpeg4.2.1-onbuild
+  #   # build:
+  #   #   context: .
+  #   #   dockerfile: opencv-onbuild.Dockerfile
