@@ -1,4 +1,4 @@
-FROM tangx/ffmpeg-alpine3.11:4.2.1-golang1.4.2
+FROm tangx/ffmpeg-alpine3.11:4.2.1-golang1.4.2
 
 LABEL maintainer="Denis Makogon. mail: lildee1991@gmail.com"
 
