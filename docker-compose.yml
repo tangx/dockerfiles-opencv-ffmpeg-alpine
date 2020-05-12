@@ -6,10 +6,10 @@ services:
     build: 
       context: 4.3.0-ffmpeg4.0-alpine
       dockerfile: onbuild.Dockerfile
-  runtime-430:
-    image: tangx/opencv-alpine:4.3.0-ffmpeg4.0-runtime
-    build:
-      context: 4.3.0-ffmpeg4.0-alpine
-      dockerfile: runtime.Dockerfile
-    depends_on: 
-      - onbuild-430
+  # runtime-430:
+  #   image: tangx/opencv-alpine:4.3.0-ffmpeg4.0-runtime
+  #   build:
+  #     context: 4.3.0-ffmpeg4.0-alpine
+  #     dockerfile: runtime.Dockerfile
+  #   depends_on: 
+  #     - onbuild-430
