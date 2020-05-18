@@ -1,13 +1,13 @@
 version: '3.1'
 
 services:
-  # ffmpeg4-debian9:
-  #   image: tangx/ffmpeg-debian:4.2.2-golang1.4.3
-  #   build: 
-  #     context: .
-  #     dockerfile: ffmpeg.Dockerfile
-  ffmpeg4-debian9:
-    image: tangx/opencv-debian:4.3.0-ffmpeg4.2.2-golang1.4.3
+  ffmpeg-debian:
+    image: tangx/ffmpeg-debian:4.1.2-golang1.14.3-buster
+    build: 
+      context: .
+      dockerfile: ffmpeg.Dockerfile
+  opencv-debian:
+    image: tangx/opencv-debian:4.3.0-ffmpeg4.1.2-golang1.4.3-buster
     build: 
       context: .
       dockerfile: opencv-onbuild.Dockerfile
