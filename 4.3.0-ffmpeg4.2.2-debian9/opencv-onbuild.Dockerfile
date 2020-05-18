@@ -1,4 +1,4 @@
-FROM tangx/ffmpeg-debian:4.2.2-golang1.4.3
+FROM tangx/ffmpeg-debian:4.1.2-golang1.14.3-buster
 
 
 ENV GOCV_VERSION v0.23.0
