@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: opencv.Dockerfile
-    enviroments:
+    environment:
       OPENCV_VERSION: 4.3.0
       GOVERSION: 1.14.3
 
