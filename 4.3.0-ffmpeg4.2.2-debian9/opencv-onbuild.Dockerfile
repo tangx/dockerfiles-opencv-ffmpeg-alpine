@@ -8,7 +8,7 @@ RUN set -eux \
     && go get -u -d gocv.io/x/gocv \
     && cd $GOPATH/src/gocv.io/x/gocv  \
     && git checkout $GOCV_VERSION   \
-    && /bin/sed -i 's/sudo//' Makefile   \
+    # && /bin/sed -i 's/sudo//' Makefile   \
     && /usr/bin/make install  \
     && export GO111MODULE=on
 
