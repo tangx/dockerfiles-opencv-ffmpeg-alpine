@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   ffmpeg-opencv:
-    image: no-push/ffmpeg-opencv
+    image: tangx/env-golang-opencv:4.3.0-ffmpeg4.2.3--onbuild
     build: 
       context: .
       dockerfile: onbuild.Dockerfile

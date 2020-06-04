@@ -14,12 +14,12 @@ jobs:
     name: '4.3.0-docker'
     runs-on: ubuntu-latest
     steps:
-    # - name: Login to DockerHub
-    #   uses: azure/docker-login@v1
-    #   with:
-    #     login-server: index.docker.io
-    #     username: ${{ secrets.USERNAME }}
-    #     password: ${{ secrets.PASSWORD }}  
+    - name: Login to DockerHub
+      uses: azure/docker-login@v1
+      with:
+        login-server: index.docker.io
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}  
   
     - name: show env
       run: env && pwd
