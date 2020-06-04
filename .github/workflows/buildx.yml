@@ -1,0 +1,28 @@
+name: opencv 4.3.0
+
+on:
+  push:
+    branches: 
+     - ffmpeg-alpine
+  pull_request:
+    branches:
+     - ffmpeg-alpine
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: tangx/env-golang-opencv:4.3.0-ffmpeg4.2.3--onbuild
+        steps:
+            # https://github.com/marketplace/actions/customizable-docker-buildx
+            - name: Checkout master
+              uses: actions/checkout@master
+            - name: Build and publish image
+              uses: ilteoood/docker_buildx@master
+              with:
+                publish: true
+                imageName: tangx/env-golang-opencv
+                tag: 4.3.0-ffmpeg4.2.3--onbuild
+                dockerHubUser: USERNAME
+                dockerHubPassword: PASSWORD
+                platform: linux/amd64,linux/arm64
+                dockerFile: onbuild.Dockerfile
