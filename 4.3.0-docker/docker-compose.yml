@@ -1,8 +1,0 @@
-version: '3.1'
-
-services: 
-  opencv:
-    image: tangx/opencv-debian:4.3.0-buster-golang1.14.3
-    build:
-      context: .
-      dockerfile: opencv.Dockerfile

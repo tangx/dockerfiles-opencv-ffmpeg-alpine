@@ -1,33 +1,34 @@
-# name: opencv 4.3.0
+name: opencv 4.3.0
 
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+on:
+  push:
+    branches: 
+     - ffmpeg-alpine
+  pull_request:
+    branches:
+     - ffmpeg-alpine
 
 
-# jobs:
-#   server:
-#     name: '4.3.0-docker'
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Login to DockerHub
-#       uses: azure/docker-login@v1
-#       with:
-#         login-server: index.docker.io
-#         username: ${{ secrets.USERNAME }}
-#         password: ${{ secrets.PASSWORD }}  
+jobs:
+  server:
+    name: '4.3.0-docker'
+    runs-on: ubuntu-latest
+    steps:
+    # - name: Login to DockerHub
+    #   uses: azure/docker-login@v1
+    #   with:
+    #     login-server: index.docker.io
+    #     username: ${{ secrets.USERNAME }}
+    #     password: ${{ secrets.PASSWORD }}  
   
-#     - name: show env
-#       run: env && pwd
-#     - name: ls -al 
-#       run: ls -al 
+    - name: show env
+      run: env && pwd
+    - name: ls -al 
+      run: ls -al 
 
-#     - name: use checkout
-#       uses:  actions/checkout@v2
-#     - name: build and push
-#       run: |
-#         cd 4.3.0-docker
-#         docker-compose build
-#         docker-compose push
+    - name: use checkout
+      uses:  actions/checkout@v2
+    - name: build and push
+      run: |
+        docker-compose build
+        docker-compose push
