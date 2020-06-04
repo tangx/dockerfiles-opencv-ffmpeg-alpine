@@ -22,7 +22,7 @@ jobs:
                 publish: true
                 imageName: tangx/env-golang-opencv
                 tag: 4.3.0-ffmpeg4.2.3--onbuild
-                dockerHubUser: USERNAME
-                dockerHubPassword: PASSWORD
+                dockerHubUser: ${{ secrets.USERNAME }}
+                dockerHubPassword: ${{ secrets.PASSWORD }}
                 platform: linux/amd64,linux/arm64
                 dockerFile: onbuild.Dockerfile
